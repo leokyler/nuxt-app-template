@@ -24,7 +24,23 @@ export default defineNuxtConfig({
 
 ### Third
 
-Install and setup test runner that include unit test and e2e test.
+Install and setup test runner that include unit test,component test and e2e test.
+
+About them:
+
+```
+当设计你的 Vue 应用的测试策略时，你应该利用以下几种测试类型：
+
+单元测试：检查给定函数、类或组合式函数的输入是否产生预期的输出或副作用。
+组件测试：检查你的组件是否正常挂载和渲染、是否可以与之互动，以及表现是否符合预期。这些测试比单元测试导入了更多的代码，更复杂，需要更多时间来执行。
+端到端测试：检查跨越多个页面的功能，并对生产构建的 Vue 应用进行实际的网络请求。这些测试通常涉及到建立一个数据库或其他后端。
+
+每种测试类型在你的应用的测试策略中都发挥着作用，保护你免受不同类型的问题的影响。
+...
+
+https://cn.vuejs.org/guide/scaling-up/testing.html
+```
+
 How setup?
 
 > https://nuxt.com/docs/getting-started/testing#using-a-nuxt-runtime-environment,
@@ -34,7 +50,7 @@ How setup?
 
 - `npm i --save-dev @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core`,
 
-**Notice,It also installed the e2e modules.**
+**Notice,It installed the all modules.**
 
 #### Unit test setup
 
@@ -56,13 +72,17 @@ export default defineVitestConfig({
 });
 ```
 
+#### Component test
+
+TBD
+
 #### E2E test setup
 
 TBD
 
 ## About Test
 
-### Unit test runner
+### Unit test & compoment test runner
 
 Vitest that the vue project default use.
 
@@ -72,6 +92,6 @@ Vitest that the vue project default use.
 
 TBD
 
-#### Try use cypress / Playwright?
+#### Try use cypress / Playwright/ WebdriverIO?
 
 TBD
